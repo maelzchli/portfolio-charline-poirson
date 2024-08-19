@@ -1,0 +1,9 @@
+
+.env
+.env.example
+
+/vendor/
+
+*.log
+*.swp
+*.bak

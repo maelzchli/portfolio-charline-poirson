@@ -1,0 +1,17 @@
+{
+    "name": "maelz/charline-painting",
+    "autoload": {
+        "psr-4": {
+            "Maelz\\CharlinePainting\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "maelzchli",
+            "email": "mael.zucchelli@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
