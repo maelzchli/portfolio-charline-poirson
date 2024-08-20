@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let ventePeinture = document.getElementById("vente-peinture");
   let supprimerPeinture = document.getElementById("supprimer-peinture");
 
+  // Champ caché pour l'ID de la peinture dans la popup
+  let peintureIdInput = document.getElementById("peinture_id");
+
   const checkboxes = document.querySelectorAll(
     '.filtre input[type="checkbox"]'
   );
@@ -43,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkbox.addEventListener("change", filtrerPeintures);
   });
 
-  filtrerPeintures();
+  filtrerPeintures(); // Appeler la fonction de filtrage au chargement de la page
 
   acryliquesBtn.addEventListener("click", () => {
     if (!acryliquesBtn.classList.contains("active")) {
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     allPeintures.forEach((peinture) => {
       let technique = peinture.dataset.technique;
 
-      if (technique === "Acrylique" || "Huile") {
+      if (technique === "Acrylique" || technique === "Huile") {
         peinture.classList.remove("cacher");
       } else {
         peinture.classList.add("cacher");
@@ -91,9 +94,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let technique = peintureClicked.dataset.technique;
     let vente = peintureClicked.dataset.vente;
     let id = peintureClicked.dataset.id;
+
+    // Remplir le champ caché avec l'ID de la peinture
+    peintureIdInput.value = id;
+
     nomPeinture.innerHTML = `${nom}`;
     dimensionsEtTechniquePeinture.innerHTML = `${technique}, ${dimensions}`;
     ventePeinture.innerHTML = `${vente}`;
+
     if (supprimerPeinture) {
       supprimerPeinture.setAttribute(
         "href",

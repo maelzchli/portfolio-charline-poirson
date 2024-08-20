@@ -37,7 +37,7 @@ if(!$_SESSION['mdp']){
 				<p id="vente-peinture"></p>
 				<form method="POST" action="update-peinture.php" id="update-form">
                 <input type="hidden" name="peinture_id" id="peinture_id">
-                <div>
+                <div class="form-admin">
                     <input type="radio" id="avendre" name="vente" value="A vendre">
                     <label for="avendre">A vendre</label>
                     <input type="radio" id="vendu" name="vente" value="Vendu">
@@ -117,7 +117,7 @@ if(!$_SESSION['mdp']){
 		<?php include('footer.php') ?>
 	</div>
 
-	<script type="text/javascript" src="./lib/main.js"></script>
+	<script type="text/javascript" src="./lib/admin.js"></script>
 
 </body>
 </html>

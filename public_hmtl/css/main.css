@@ -364,6 +364,10 @@ h3 {
   width: 20%;
 }
 
+.form-admin {
+  margin-bottom: 2em;
+}
+
 .connexion-form > div > .place-label {
   padding-bottom: 3em;
   display: flex;
